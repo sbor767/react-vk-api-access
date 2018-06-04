@@ -1,8 +1,8 @@
 {
-  "name": "webim-test-job",
+  "name": "react-vk-api-access",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Alersandr Borkov <sbor767@yandex.ru>",
+  "author": "Aleksandr Borkov <sbor767@yandex.ru>",
   "license": "MIT",
   "scripts": {
     "build": "node scripts/copy_assets.js && node_modules/.bin/webpack --config webpack.config.prod.js",

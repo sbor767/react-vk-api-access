@@ -3,9 +3,9 @@ import React from 'react'
 const FriendsContainer = ({ friends }) => {
     return (
         <div id='FriendsContainer' className='inner-container'>
-            <h3>Ваши друзья (до 5-ти):</h3>
+            <h3>Your friends (up to 5):</h3>
             {friends.length === 0 ? (
-                <div>Друзей нет!</div>
+                <div>No friends!</div>
             ) : (
                 <ul>
                     {friends.map((friend, i) => (

@@ -16,7 +16,7 @@ class App extends Component {
     componentDidMount() {
         VK.Auth.getLoginStatus(response => {
             if (response.status === 'connected') {
-                // если пользователь залогинен в ВК
+                // If the user is logged into VK
                 this.setStateFromSession(response.session)
             }
         })
@@ -25,13 +25,14 @@ class App extends Component {
     setStateFromSession = session => {
         let user = { firstName: '', lastName: '' }
         if (typeof(session.user) === 'undefined') {
-            // Этого поля нет тогда, когда пользователь был залогинен ранее.
+            // This field is not present when the user was previously logged in.
             VK.api('users.get', { uid: session.mid, v: VK_API_VERSION }, r => {
                 user.firstName = r.response[0].first_name
                 user.lastName = r.response[0].last_name
             })
         } else {
-            // Если авторизация прошла только что (от VK.Auth.login(authInfo);), то имя и фамилия уже будут в ответе
+            // If authorization has just been completed (from VK.Auth.login(authInfo);),
+            // then the first and last names will already be in the response.
             user.firstName = session.user.first_name
             user.lastName = session.user.last_name
         }
@@ -77,7 +78,7 @@ class App extends Component {
                     </div>
                     )
                 }
-                <div id="footer"><span>*</span>Сайт не хранит никакую информацию, включая куки</div>
+                <div id="footer"><span>*</span>The website does not store any information, including cookies</div>
             </div>
         )
     }
