@@ -61,8 +61,8 @@ class App extends Component {
         return (
             <div id="container">
                 <HeaderContainer />
-                <p>При нажатии кнопки "Авторизоваться" - делает oauth авторизацию ВКонтакте,
-                    и показывает имя авторизованного пользователя и 5 любых друзей пользователя.</p>
+                <p>Clicking the "Authorize" button performs OAuth authorization on <a href="https://vk.com/">VK</a> and displays the name of
+                    the authorized user and five of their friends.</p>
                 {!this.state.user ? (
                     <LoginContainer
                         onLogin={this.handleAuthorize}
