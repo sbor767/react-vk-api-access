@@ -1,6 +1,6 @@
 # React VK API Access
 
-This is a minimal React-based demo application for authenticating users via VKontakte (VK) OAuth and accessing basic VK API endpoints.
+This is a minimal React-based demo application for authenticating users via VKontakte (VK) OAuth and accessing basic VK API endpoints. It was originally built in 2018 as a learning experiment.
 
 ## Features
 
@@ -33,3 +33,16 @@ Clicking the "Authorize" button performs OAuth authorization on VKontakte and di
 ## Disclaimer
 
 This project was built for demonstration purposes only and is not actively maintained.
+
+---
+
+## ⚠️ Status (2025)
+
+VK's OAuth API and SDK behavior have changed since 2018, and **this demo no longer functions as expected**.
+
+### TODO
+
+* Investigate VK API changes since 2023
+* Replace deprecated `VK.Auth.login` usage
+* Migrate to current OAuth flow (possibly using redirect URL + server handling)
+* Consider switching to the new [VK Mini Apps platform](https://dev.vk.com/miniprogram/start)
